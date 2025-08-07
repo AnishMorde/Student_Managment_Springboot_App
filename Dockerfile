@@ -1,14 +1,12 @@
-# Use Eclipse Temurin official Java 21 image
-FROM eclipse-temurin:21-jdk
-
-# Set working directory
+# -------- Build stage --------
+FROM maven:3.9-eclipse-temurin-21 as build
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copy the built jar from your project to the image
-COPY target/your-app.jar app.jar
-
-# Expose port (adjust if your Spring Boot runs on a different port)
+# -------- Runtime stage --------
+FROM eclipse-temurin:21-jdk
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Run the jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
