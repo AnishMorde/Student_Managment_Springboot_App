@@ -1,14 +1,14 @@
-# Start from an OpenJDK image
-FROM eclipse-temurin:17-jdk
+# Use Eclipse Temurin official Java 21 image
+FROM eclipse-temurin:21-jdk
 
 # Set working directory
 WORKDIR /app
 
-# Copy your built JAR file into the container (make sure to build before deploying!)
-COPY target/*.jar app.jar
+# Copy the built jar from your project to the image
+COPY target/your-app.jar app.jar
 
-# Expose the port your Spring Boot app runs on
+# Expose port (adjust if your Spring Boot runs on a different port)
 EXPOSE 8080
 
-# Start the Spring Boot app
+# Run the jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
