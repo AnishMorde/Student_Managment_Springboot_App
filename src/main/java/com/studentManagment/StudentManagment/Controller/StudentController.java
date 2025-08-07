@@ -7,8 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
-//controller
+
 @RestController
 @RequestMapping("api/students")
 @CrossOrigin(origins = "*")
@@ -24,6 +23,7 @@ private final StudentService studentService;
    public ResponseEntity<Student> addStudent (@RequestBody Student student){
        return ResponseEntity.ok(studentService.addStudent(student));
    }
+
 
    @GetMapping
     public ResponseEntity<List<Student>> getAllStudents (){
