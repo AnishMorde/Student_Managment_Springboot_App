@@ -1,8 +1,0 @@
-com\studentManagment\StudentManagment\StudentManagmentApplication.class
-com\studentManagment\StudentManagment\Controller\StudentController.class
-com\studentManagment\StudentManagment\Entity\Student.class
-com\studentManagment\StudentManagment\Repo\StudentRepository.class
-com\studentManagment\StudentManagment\Entity\Student$StudentBuilder.class
-com\studentManagment\StudentManagment\Service\StudentService.class
-com\studentManagment\StudentManagment\config\UptimeChecker.class
-com\studentManagment\StudentManagment\Controller\UptimeController.class
