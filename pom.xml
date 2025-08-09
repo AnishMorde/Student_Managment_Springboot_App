@@ -95,6 +95,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>springboot-image</finalName>
 	</build>
 
 </project>
