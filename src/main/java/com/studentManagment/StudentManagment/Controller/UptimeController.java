@@ -18,6 +18,6 @@ public class UptimeController {
         if (responseTime == -1) {
             return "Website is currently DOWN or unreachable.";
         }
-        return "Latest response time: " + responseTime + "ms";
+        return "Latest response for the web app: " + responseTime + "ms";
     }
 }
